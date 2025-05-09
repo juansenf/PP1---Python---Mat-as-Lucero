@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    usuarios
+{% endblock %}
+
+{% block body %}
+FECHA {{today}}
+    <ul>
+        {% for usuario in usuarios %}
+        <li>
+            <h4>Usuario: {{ usuario.id.value }}</h4>
+            <img src='{{ usuario.picture.large }}'>
+            <p><strong>Nombre completo:</strong> {{ usuario.name.first }} {{ usuario.name.last }}</p>
+            <p><strong>Género:</strong> {{ usuario.gender }}</p>
+            <p><strong>Dirección:</strong> {{ usuario.location.street.name }} {{ usuario.location.street.number}}</p>
+        </li>        
+        {%endfor%}
+    </ul>
+{% endblock %}
