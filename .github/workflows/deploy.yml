@@ -22,7 +22,6 @@ jobs:
       - name: Run Deploy Script
         run: |
          ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ 
-secrets.SERVER_IP }}        " cd ~/lemp-sites/juan_falco/PP1---Python---Mat-as-Lucero 
-&&
+secrets.SERVER_IP }}        " cd ~/lemp-sites/juan_falco/PP1---Python---Mat-as-Lucero &&
             git pull origin main
           "
