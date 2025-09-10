@@ -3,7 +3,7 @@ name: CD - Deploy con Git Pull
 on:
   push:
     branches:
-      - main
+      - develop
 
 jobs:
   deploy:
@@ -21,4 +21,4 @@ jobs:
 
       - name: Run Deploy Script
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} " cd ~/lemp-sites/juan_falco/PP1---Python---Mat-as-Lucero && git pull origin main "
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} " cd ~/lemp-sites/juan_falco/staging && git pull origin develop "
