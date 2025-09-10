@@ -1,4 +1,4 @@
-name: CD - Deploy con Git Pull
+name: CD - staging
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    name: Deploy to Server
+    name: staging
     runs-on: ubuntu-latest
 
     steps:
